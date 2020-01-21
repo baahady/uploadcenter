@@ -45,7 +45,7 @@
             }
 
             .title {
-                font-size: 84px;
+                font-size: 24px;
             }
 
             .links > a {
@@ -81,7 +81,12 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    <form>
+                      <div class="form-group">
+                        <label for="exampleFormControlFile1">Select a File For Upload</label>
+                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                      </div>
+                    </form>
                 </div>
 
                 <div class="links">
