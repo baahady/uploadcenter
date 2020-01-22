@@ -39,6 +39,11 @@
                 right: 10px;
                 top: 18px;
             }
+            .top-left{
+                position: absolute;
+                left: 50px;
+                top: 18px;
+            }
 
             .content {
                 text-align: center;
@@ -79,6 +84,11 @@
                 </div>
             @endif
 
+            <div class="top-left">
+                <a href="{{ url('locale/en') }}">English</a> / <a href="{{ url('locale/fa') }}">فارسی</a>
+            </div>
+
+
             <div class="content">
                 <div class="title m-b-md">
                     <form>
@@ -87,6 +97,10 @@
                         <input type="file" class="form-control-file" id="exampleFormControlFile1">
                       </div>
                     </form>
+
+                    <p>{{ trans('sentence.welcome')}}</p>
+
+
                 </div>
 
                 <div class="links">
