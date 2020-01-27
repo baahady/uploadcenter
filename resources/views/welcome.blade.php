@@ -91,11 +91,13 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    <form>
+                    <form action="/process" enctype="multipart/form-data" method="post">
                       <div class="form-group">
                         <label for="exampleFormControlFile1">Select a File For Upload</label>
-                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                        <input type="file" class="form-control-file" id="exampleFormControlFile1" name="photo[]" multiple>
                       </div>
+                      <input type="submit" name="submit" value="upload">
+                      {{csrf_field()}}
                     </form>
 
                     <p>{{ trans('sentence.welcome')}}</p>
