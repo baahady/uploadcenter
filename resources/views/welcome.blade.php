@@ -94,7 +94,7 @@
                     <form action="/process" enctype="multipart/form-data" method="post">
                       <div class="form-group">
                         <label for="exampleFormControlFile1">Select a File For Upload</label>
-                        <input type="file" class="form-control-file" id="exampleFormControlFile1" name="photo[]" multiple>
+                        <input type="file" class="form-control-file" id="exampleFormControlFile1" name="photo">
                       </div>
                       <input type="submit" name="submit" value="upload">
                       {{csrf_field()}}
