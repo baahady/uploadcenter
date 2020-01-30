@@ -90,7 +90,11 @@
 
 
             <div class="content">
+
                 <div class="title m-b-md">
+                @foreach($data as $value)
+                    <h1>{{$value->name}}</h1>
+                @endforeach
                     <form action="/process" enctype="multipart/form-data" method="post">
                       <div class="form-group">
                         <label for="exampleFormControlFile1">Select a File For Upload</label>

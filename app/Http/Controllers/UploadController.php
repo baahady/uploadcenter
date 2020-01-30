@@ -7,12 +7,15 @@ use App\Upload;
 
 class UploadController extends Controller
 {
-    public function index(){
+    public function index(Upload $upload){
+        $upload = Upload::find(1);
+        $a = $upload->user()->name;
 
-    	return view('welcome');
+    	return view('welcome')->with('data',$a);
     }
 
     public function process(Upload $upload , Request $request){
+
 
     	$validation = $request->validate([
     		'photo' => 'required|file|image|mimes:jpeg,png,gif|max:2048'
@@ -24,7 +27,7 @@ class UploadController extends Controller
     	$path = $file->storeAs('photos',$filename);
 
     	$upload->file_name = $path;
-    	$upload->user()->associate()->save();
+    	$upload->save();
 
     	/*$path = $request->file('photo')->store('photos');
     	dd($path);*/

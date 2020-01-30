@@ -37,7 +37,7 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function upload(){
+    /*public function upload(){
         return $this->blongsToMany('app\Upload','id','user_id');
-    }
+    }*/
 }
